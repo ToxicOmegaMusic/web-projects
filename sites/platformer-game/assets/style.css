@@ -1,0 +1,27 @@
+body {
+	margin: 5rem;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content: center;
+}
+main {
+	display: flex;
+	flex-direction: column-reverse;
+}
+.main-menu {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	visibility: hidden;
+	position: absolute;
+	width: auto;
+	height: auto;
+}
+button {
+	margin-top: 50px;
+	padding: 10px;
+}
+p {
+	font-size: 2em;
+}
