@@ -17,18 +17,20 @@ main {
 	justify-content: center;
 }
 .main-menu {
-	display: flex;
+	display: none;
 	flex-direction: row;
 	justify-content: space-around;
-	visibility: hidden;
 	position: absolute;
 	width: auto;
 	height: auto;
 }
 button {
-	margin-top: 50px;
-	padding: 10px;
+	margin: 0.5rem 1rem;
+	padding: 0.7rem;
+	cursor: pointer;
 }
-p {
-	font-size: 2em;
+#winTxt {
+	font-size: 2rem;
+	position: absolute;
+	bottom: 13rem;
 }

@@ -11,7 +11,7 @@ let lvlWonArray = [];
 let mainMenuObj = document.querySelector('.main-menu');
 let button1 = document.querySelector('#button1');
 let button2 = document.querySelector('#button2');
-let gameWonText = document.querySelector('p');
+let gameWonText = document.querySelector('#winTxt');
 gameWonText.style.display = 'none';
 
 //create button for each level and give it some text
@@ -47,7 +47,7 @@ function draw() {
 }
 
 function mainMenu() {
-    mainMenuObj.style.visibility = 'visible';
+    mainMenuObj.style.display = 'flex';
     pausecd++;
     plvelx = 0;
     plvely = 0;
@@ -65,7 +65,7 @@ function closeMenu() {
     //make buttons display on screen, but the main-menu class is still hidden so they cant be seen
     button1.style.display = 'block';
     button2.style.display = 'block';
-    mainMenuObj.style.visibility = 'hidden';
+    mainMenuObj.style.display = 'none';
     // hide buttons from other menus
     level1Button.style.display = 'none';
     level2Button.style.display = 'none';
@@ -81,7 +81,7 @@ function restart(currlvl) {
     // this restarts the game
     loadLevel(currlvl);
     paused = false;
-    mainMenuObj.style.visibility = 'hidden';
+    mainMenuObj.style.display = 'none';
 }
 
 function levelSelect() {
@@ -405,13 +405,13 @@ const levels = [
         "-Z-C--------T-0000000000111112212222222211122222-------22222222222222",
         "-Z---------00001111111111122222112222222112222----------2222222222222",
         "-Z------C--11111222222222222222112222222222222-----------222222222222",
-        "-Z-----------222222222-----22222122222------------22L----L22222222222",
-        "-Z-------------222222-------22----L22------------2222L----L2222222222",
-        "-Z----------------222---L---2L----L22---LL-----2222222L----L222222222",
-        "-Z----------------------L------L-------LLLL--2222222222L----L22222222",
-        "-Z---------12222222222222------2222222222222222222222222L---------222",
-        "-Z--S-----11222222222222222222222222222222222222222212222L------G-222",
-        "-Z----T--1122222222222222222222222222112222222222222122222--------222",
+        "-Z-----------222222222-----22222122222------------2L-----L22222222222",
+        "-Z-------------222222-------22----L22------------222L-----L2222222222",
+        "-Z----------------222---L---2L----L22---LL-----222222L-----L222222222",
+        "-Z----------------------L------L-------LLLL--222222222L-----L22222222",
+        "-Z---------12222222222222------222222222222222222222222L----------222",
+        "-Z--S-----1122222222222222222222222222222222222222221222L-------G-222",
+        "-Z----T--112222222222222222222222222211222222222222212222---------222",
         "000000000122222222222222222222222222222222222222222222222222222222222"
     ],
 ];
